@@ -73,15 +73,17 @@ export const signup = async (req, res) => {
   (
     full_name,
     employee_code,
+    username,
     email,
     mobile,
     password
   )
   VALUES
-  (?, ?, ?, ?, ?)
+  (?, ?, ?, ?, ?, ?)
   `,
   [
     fullName,
+    employeeCode,
     employeeCode,
     email,
     mobile,
@@ -187,16 +189,16 @@ export const login = async (req, res) => {
 
         ON u.role_id = r.id
 
-      INNER JOIN companies c
+      LEFT JOIN companies c
 
         ON u.company_id = c.id
 
-      WHERE u.username = ?
+      WHERE u.username = ? OR u.email = ?
 
       LIMIT 1
       `,
 
-      [username]
+      [username, username]
 
     );
 
