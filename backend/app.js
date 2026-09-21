@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import pool from "./config/db.js";
 
 import employeeRoutes from "./routes/employeeRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -48,4 +49,16 @@ app.use("/api/notifications", notificationRoutes);
 app.use("/api/company-settings", companySettingsRoutes);
 app.use("/api/security", securityRoutes);
 app.use("/api/test", testRoutes);
+
+app.get("/api/health", async (req, res) => {
+  try {
+    const [rows] = await pool.execute(
+      "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_name"
+    );
+    res.json({ ok: true, tables: rows.map(r => r.table_name) });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message });
+  }
+});
+
 export default app;

@@ -101,7 +101,8 @@ export const signup = async (req, res) => {
 
     res.status(500).json({
       success: false,
-      message: "Server Error"
+      message: "Server Error",
+      detail: error.message
     });
 
   }
