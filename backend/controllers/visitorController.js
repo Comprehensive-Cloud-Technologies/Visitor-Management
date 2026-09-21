@@ -1844,18 +1844,12 @@ await connection.execute(
 await connection.execute(
 
   `
-  DELETE va
-  FROM visitor_assets va
-
-  INNER JOIN visitors v
-
-    ON v.id = va.visitor_id
-
+  DELETE FROM visitor_assets
+  USING visitors
   WHERE
-
-    va.visitor_id = ?
-
-    AND v.company_id = ?
+    visitor_assets.visitor_id = visitors.id
+    AND visitor_assets.visitor_id = ?
+    AND visitors.company_id = ?
   `,
 
   [
