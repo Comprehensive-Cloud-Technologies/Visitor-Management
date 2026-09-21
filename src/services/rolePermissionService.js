@@ -1,7 +1,7 @@
-import axios from "axios";
+﻿import axios from "axios";
 
 const API_URL =
-"http://localhost:3060/api/role-permissions";
+"/api/role-permissions";
 
 export const getRolePermissions =
 (roleId) =>
@@ -18,5 +18,5 @@ data
 export const getPermissionsByRole =
 (roleId)=>
 axios.get(
-`http://localhost:3060/api/role-permissions/permissions/${roleId}`
+`/api/role-permissions/permissions/${roleId}`
 );

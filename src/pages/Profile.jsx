@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Profile.css";
@@ -31,7 +31,7 @@ function Profile() {
       try {
 
         const response = await axios.get(
-          `http://localhost:3060/api/users/${loggedUser?.id}`
+          `/api/users/${loggedUser?.id}`
         );
 
         if (response.data.success) {
@@ -82,7 +82,7 @@ function Profile() {
 
       const response =
         await axios.put(
-          `http://localhost:3060/api/auth/profile/${user.id}`,
+          `/api/auth/profile/${user.id}`,
           formData
         );
 

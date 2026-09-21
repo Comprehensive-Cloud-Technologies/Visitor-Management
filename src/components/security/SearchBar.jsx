@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import axios from "axios";
 
 import "./SearchBar.css";
@@ -32,7 +32,7 @@ useEffect(() => {
         try {
 
             const response = await axios.get(
-                `http://localhost:3060/api/visitors/search/${searchId}`
+                `/api/visitors/search/${searchId}`
             );
 
             if (response.data.success) {
@@ -74,7 +74,7 @@ useEffect(() => {
 
                 <div className="shield">
 
-                    🛡️
+                    ðŸ›¡ï¸
 
                 </div>
 
@@ -176,7 +176,7 @@ useEffect(() => {
 
                                 :
 
-                                "🔍 Search"
+                                "ðŸ” Search"
 
                         }
 

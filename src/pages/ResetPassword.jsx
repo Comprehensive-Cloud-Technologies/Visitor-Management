@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 //import "./ForgotPassword.css";
@@ -41,7 +41,7 @@ function ResetPassword() {
 
         const response =
           await axios.post(
-            "http://localhost:3060/api/auth/reset-password",
+            "/api/auth/reset-password",
             {
               email,
               password

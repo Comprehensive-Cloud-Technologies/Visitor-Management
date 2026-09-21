@@ -1,7 +1,7 @@
-import axios from "axios";
+﻿import axios from "axios";
 
 const API =
-"http://localhost:3060/api/dashboard";
+"/api/dashboard";
 
 export const getDashboardStats =
 () =>

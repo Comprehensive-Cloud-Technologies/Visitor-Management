@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -71,7 +71,7 @@ const handleSubmit = async (e) => {
   try {
 
     const response = await axios.post(
-      "http://localhost:3060/api/auth/register",
+      "/api/auth/register",
       formData
     );
 

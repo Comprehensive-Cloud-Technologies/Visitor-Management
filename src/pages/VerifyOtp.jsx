@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -39,7 +39,7 @@ if (!email) {
 
         const response =
           await axios.post(
-            "http://localhost:3060/api/auth/verify-otp",
+            "/api/auth/verify-otp",
             {
               email,
               otp

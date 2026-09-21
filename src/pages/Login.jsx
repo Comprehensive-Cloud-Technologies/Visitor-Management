@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -29,7 +29,7 @@ function Login() {
     try {
 
      const response = await axios.post(
-  "http://localhost:3060/api/auth/login",
+  "/api/auth/login",
   {
     username,
     password

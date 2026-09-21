@@ -1,4 +1,4 @@
-import {
+﻿import {
 useState,
 useEffect
 } from "react";
@@ -216,7 +216,7 @@ const response =
 
   await axios.get(
 
-    `http://localhost:3060/api/visitors/scan/${id}`,
+    `/api/visitors/scan/${id}`,
 
     {
 
@@ -358,7 +358,7 @@ const response =
 
   await axios.put(
 
-    `http://localhost:3060/api/visitors/checkin/${id}`,
+    `/api/visitors/checkin/${id}`,
 
     {
 
@@ -849,7 +849,7 @@ style={{
 
       >
 
-        👤
+        ðŸ‘¤
 
       </div>
 
@@ -1572,7 +1572,7 @@ style={{
 
       >
 
-        ✓ Visitor Already Checked In
+        âœ“ Visitor Already Checked In
 
       </div>
 
@@ -1607,7 +1607,7 @@ style={{
 
       >
 
-        ✕ Visitor Request Rejected
+        âœ• Visitor Request Rejected
 
       </div>
 

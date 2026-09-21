@@ -1,5 +1,5 @@
-const API_BASE_URL =
-  "http://localhost:3060/api";
+﻿const API_BASE_URL =
+  "/api";
 
 /* ==========================================
    GET LOGGED-IN COMPANY ID

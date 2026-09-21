@@ -1,4 +1,4 @@
-// import { useState } from "react";
+﻿// import { useState } from "react";
 // import axios from "axios";
 
 // import SearchBar from "../../components/security/SearchBar";
@@ -66,7 +66,7 @@
 
 //             const response =
 //                 await axios.get(
-//                     `http://localhost:3060/api/visitors/scan/${searchId}`
+//                     `/api/visitors/scan/${searchId}`
 //                 );
 
 //             if (response.data.success) {
@@ -216,7 +216,7 @@
 
 //                         <div className="security-alert success">
 
-//                             🟢 This visitor is already inside the premises.
+//                             ðŸŸ¢ This visitor is already inside the premises.
 
 //                         </div>
 
@@ -228,7 +228,7 @@
 
 //                         <div className="security-alert danger">
 
-//                             🔴 This visitor has already exited the premises.
+//                             ðŸ”´ This visitor has already exited the premises.
 
 //                         </div>
 
@@ -281,7 +281,7 @@
 
 //                             >
 
-//                                 🚪 Check Out Visitor
+//                                 ðŸšª Check Out Visitor
 
 //                             </button>
 
@@ -1043,7 +1043,7 @@ const handleCheckout = async (visitorId) => {
 
         <div>
 
-            <h3>📷 Live Visitor Verification</h3>
+            <h3>ðŸ“· Live Visitor Verification</h3>
 
             <p>
                 Capture visitor photo before allowing entry.
@@ -1058,7 +1058,7 @@ const handleCheckout = async (visitorId) => {
                     : "camera-status waiting"
             }
         >
-            {livePhoto ? "✔ Verified" : "Waiting"}
+            {livePhoto ? "âœ” Verified" : "Waiting"}
         </span>
 
     </div>
@@ -1089,7 +1089,7 @@ const handleCheckout = async (visitorId) => {
 
                                 <div className="capture-success">
 
-                                    ✔ Photo Captured Successfully
+                                    âœ” Photo Captured Successfully
 
                                 </div>
 
@@ -1117,7 +1117,7 @@ setCameraOn(true);
 
                                 >
 
-                                    🔄 Retake
+                                    ðŸ”„ Retake
 
                                 </button>
 
@@ -1134,7 +1134,7 @@ setLivePhotoCapturedAt("");
 
                                 >
 
-                                    🗑 Remove
+                                    ðŸ—‘ Remove
 
                                 </button>
 
@@ -1152,7 +1152,7 @@ setLivePhotoCapturedAt("");
 
                             <div className="camera-icon">
 
-                                📷
+                                ðŸ“·
 
                             </div>
 
@@ -1172,7 +1172,7 @@ setLivePhotoCapturedAt("");
 
                             >
 
-                                📷 Start Camera
+                                ðŸ“· Start Camera
 
                             </button>
 
@@ -1214,7 +1214,7 @@ setLivePhotoCapturedAt("");
 
                     >
 
-                        📸 Capture Photo
+                        ðŸ“¸ Capture Photo
 
                     </button>
 

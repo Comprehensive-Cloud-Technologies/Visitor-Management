@@ -1,4 +1,4 @@
-import {
+﻿import {
   Outlet,
   Link,
   useNavigate,
@@ -91,10 +91,10 @@ useEffect(() => {
 
       audio.play()
         .then(() => {
-          console.log("🔊 Sound Played");
+          console.log("ðŸ”Š Sound Played");
         })
         .catch(error => {
-          console.log("❌ Sound Error", error);
+          console.log("âŒ Sound Error", error);
         });
 
       setNotifications(prev => [
@@ -336,7 +336,7 @@ async () => {
     )
   }
 >
-  🔔
+  ðŸ””
 
   {
     notifications.filter(

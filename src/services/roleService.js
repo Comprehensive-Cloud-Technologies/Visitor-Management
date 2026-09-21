@@ -1,7 +1,7 @@
-import axios from "axios";
+﻿import axios from "axios";
 
 const API_URL =
-"http://localhost:3060/api/roles";
+"/api/roles";
 
 export const getRoles =
 () =>

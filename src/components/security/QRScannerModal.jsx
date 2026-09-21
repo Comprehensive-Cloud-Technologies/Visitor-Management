@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Html5QrcodeScanner } from "html5-qrcode";
 import axios from "axios";
 
@@ -53,7 +53,7 @@ function QRScannerModal({
 
 const response = await axios.get(
 
-    `http://localhost:3060/api/visitors/pass/${passId}`
+    `/api/visitors/pass/${passId}`
 
 );
 
@@ -109,7 +109,7 @@ const response = await axios.get(
 
                     <button onClick={onClose}>
 
-                        ✕
+                        âœ•
 
                     </button>
 
