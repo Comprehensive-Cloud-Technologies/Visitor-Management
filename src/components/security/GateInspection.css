@@ -1,0 +1,433 @@
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.gate-card{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.gate-header{
+    padding:22px 26px;
+    border-bottom:1px solid #edf1f5;
+    background:#f8fafc;
+}
+
+.gate-header h2{
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.gate-header p{
+    margin-top:6px;
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.gate-section{
+    padding:22px 26px;
+    border-bottom:1px solid #edf1f5;
+}
+
+.gate-section h3{
+    margin:0 0 18px;
+    font-size:18px;
+    color:#1e293b;
+}
+
+/* ==========================================
+   VEHICLE GRID
+========================================== */
+
+.vehicle-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.vehicle-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.vehicle-field.full{
+
+    grid-column:1/-1;
+
+}
+
+.vehicle-field label{
+
+    margin-bottom:8px;
+
+    color:#64748b;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.vehicle-field input,
+.vehicle-field select{
+
+    height:46px;
+
+    border:1px solid #dbe3ec;
+
+    border-radius:10px;
+
+    padding:0 14px;
+
+    outline:none;
+
+    background:white;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.vehicle-field input:focus,
+.vehicle-field select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.10);
+
+}
+
+/* ==========================================
+   ASSET HEADER
+========================================== */
+
+.asset-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.asset-title span{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   ASSET GRID
+========================================== */
+
+.asset-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+
+    gap:18px;
+
+}
+
+/* ==========================================
+   ASSET CARD
+========================================== */
+
+.asset-box{
+
+    border:1px solid #e5e7eb;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    transition:.25s;
+
+    background:white;
+
+}
+
+.asset-box:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(15,23,42,.08);
+
+}
+
+/* ==========================================
+   PHOTO
+========================================== */
+
+.asset-photo{
+
+    height:160px;
+
+    background:#f8fafc;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:60px;
+
+    color:#94a3b8;
+
+}
+
+.asset-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* ==========================================
+   INFO
+========================================== */
+
+.asset-info{
+
+    padding:16px;
+
+}
+
+.asset-info h4{
+
+    margin:0;
+
+    color:#0f172a;
+
+    font-size:18px;
+
+}
+
+.asset-info p{
+
+    margin:8px 0;
+
+    color:#334155;
+
+    font-weight:600;
+
+}
+
+.asset-info small{
+
+    color:#64748b;
+
+    display:block;
+
+}
+
+.asset-remarks{
+
+    margin-top:10px;
+
+    background:#f8fafc;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    color:#475569;
+
+}
+
+/* ==========================================
+   VERIFIED
+========================================== */
+
+.verify-checkbox{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px;
+
+    border-top:1px solid #edf1f5;
+
+    font-weight:600;
+
+    color:#16a34a;
+
+    cursor:pointer;
+
+}
+
+.verify-checkbox input{
+
+    width:18px;
+
+    height:18px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   NO ASSETS
+========================================== */
+
+.no-assets{
+
+    padding:40px;
+
+    text-align:center;
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    color:#64748b;
+
+}
+
+/* ==========================================
+   SUMMARY
+========================================== */
+
+.inspection-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    background:#f8fafc;
+
+}
+
+.inspection-summary div{
+
+    padding:20px;
+
+    text-align:center;
+
+    border-right:1px solid #e5e7eb;
+
+}
+
+.inspection-summary div:last-child{
+
+    border-right:none;
+
+}
+
+.inspection-summary span{
+
+    display:block;
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+.inspection-summary strong{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:26px;
+
+    color:#0f172a;
+
+}
+
+.green{
+
+    color:#16a34a !important;
+
+}
+
+.orange{
+
+    color:#f59e0b !important;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.vehicle-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.asset-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.inspection-summary{
+
+grid-template-columns:1fr;
+
+}
+
+.inspection-summary div{
+
+border-right:none;
+
+border-bottom:1px solid #e5e7eb;
+
+}
+
+.inspection-summary div:last-child{
+
+border-bottom:none;
+
+}
+
+}

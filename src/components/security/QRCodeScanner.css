@@ -1,0 +1,59 @@
+.scanner-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.scanner-box{
+
+    width:550px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+.scanner-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 25px;
+
+    background:#0f4c81;
+
+    color:#fff;
+
+}
+
+.scanner-header button{
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}

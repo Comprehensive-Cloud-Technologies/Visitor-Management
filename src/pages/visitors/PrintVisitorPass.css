@@ -1,0 +1,159 @@
+.visitor-pass-card{
+  width:720px;
+  max-width:95%;
+  margin:auto;
+  background:#fff;
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.10);
+}
+.pass-actions{
+  width:720px;
+  max-width:95%;
+  margin:0 auto 15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.pass-page{
+  padding:10px;
+}
+.pass-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.company-block h1{
+margin:0;
+font-size:22px;
+}
+
+.company-block p{
+margin:5px 0 0;
+color:#64748b;
+ font-size:13px;
+}
+
+.pass-id{
+background:#0f4c81;
+color:#fff;
+padding:12px 22px;
+border-radius:10px;
+font-weight:700;
+font-size:18px;
+}
+
+.pass-divider{
+height:1px;
+background:#e2e8f0;
+margin:25px 0;
+}
+
+.pass-middle{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.pass-left{
+flex:1;
+}
+
+.visitor-name{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.pass-right{
+width:180px;
+display:flex;
+justify-content:center;
+}
+
+.pass-photo{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #0f4c81;
+}
+
+.pass-avatar{
+ width:110px;
+  height:110px;
+  font-size:40px;
+border-radius:50%;
+background:#e2e8f0;
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:bold;
+}
+
+.pass-info{
+border-top:1px solid #e2e8f0;
+padding-top:20px;
+}
+
+.pass-row{
+display:flex;
+justify-content:space-between;
+padding:8px 0;
+border-bottom:1px solid #f1f5f9;
+}
+
+.pass-row span{
+color:#64748b;
+}
+
+.pass-row strong{
+text-align:right;
+}
+
+.pass-footer{
+margin-top:15px;
+text-align:center;
+}
+
+.signature-block{
+margin-bottom:20px;
+}
+
+.signature-img{
+width:220px;
+height:80px;
+object-fit:contain;
+border-bottom:1px solid #000;
+}
+
+.status-in{
+background:#16a34a;
+color:#fff;
+padding:8px 15px;
+border-radius:20px;
+}
+
+.status-out{
+background:#dc2626;
+color:#fff;
+padding:8px 15px;
+border-radius:20px;
+}
+
+.status-pending{
+background:#f59e0b;
+color:#fff;
+padding:8px 15px;
+border-radius:20px;
+}
+.back-btn,
+.print-btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}

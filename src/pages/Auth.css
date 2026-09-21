@@ -1,0 +1,167 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+.auth-container{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.45)
+    ),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600");
+
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+}
+
+.auth-right{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.auth-card{
+  width:100%;
+  max-width:480px;
+
+  background:rgba(255,255,255,.96);
+
+  padding:40px;
+
+  border-radius:20px;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.25);
+
+  backdrop-filter:blur(15px);
+}
+
+.auth-card h2{
+  text-align:center;
+
+  margin-bottom:30px;
+
+  color:#1f2937;
+
+  font-size:32px;
+  font-weight:700;
+}
+
+.auth-card input:not([type="checkbox"]){
+  width:100%;
+  height:52px;
+  margin-bottom:16px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  padding:0 15px;
+  font-size:14px;
+  outline:none;
+  transition:.3s;
+}
+.auth-card input:focus{
+  border-color:#2563eb;
+
+  box-shadow:
+  0 0 0 4px rgba(37,99,235,.12);
+}
+
+.password-box{
+  position:relative;
+}
+
+.password-box input{
+  padding-right:45px;
+  margin-bottom:0;
+}
+
+.password-box span{
+  position:absolute;
+
+  right:15px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  cursor:pointer;
+
+  color:#6b7280;
+
+  font-size:18px;
+}
+
+.auth-btn{
+  width:100%;
+
+  height:52px;
+
+  margin-top:20px;
+
+  border:none;
+
+  border-radius:10px;
+
+  background:#facc15;
+
+  color:#111827;
+
+  font-size:15px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.auth-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 10px 20px rgba(250,204,21,.35);
+}
+
+.switch-auth{
+  text-align:center;
+
+  margin-top:22px;
+
+  color:#6b7280;
+
+  font-size:14px;
+}
+
+.switch-auth a{
+  margin-left:6px;
+
+  color:#2563eb;
+
+  text-decoration:none;
+
+  font-weight:600;
+}
+
+.switch-auth a:hover{
+  text-decoration:underline;
+}
+
+@media(max-width:768px){
+
+  .auth-card{
+    padding:25px;
+  }
+
+  .auth-card h2{
+    font-size:26px;
+  }
+
+}

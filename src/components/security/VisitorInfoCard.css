@@ -1,0 +1,311 @@
+/* ===============================
+   VISITOR CARD
+================================== */
+
+.visitor-card{
+
+    display:grid;
+
+    grid-template-columns:220px 1fr 1fr;
+
+    gap:20px;
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+
+    border:1px solid #e2e8f0;
+
+}
+
+/* ===============================
+   PROFILE PANEL
+================================== */
+
+.visitor-profile-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-right:1px solid #e5e7eb;
+
+    padding-right:20px;
+
+}
+
+.visitor-photo{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    border:4px solid #dbeafe;
+
+    background:#f8fafc;
+
+}
+
+.visitor-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.photo-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:70px;
+
+    color:#94a3b8;
+
+}
+
+.visitor-status{
+
+    margin-top:18px;
+
+}
+
+.status-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+/* Status Colors */
+
+.status-badge.approved{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.status-badge.pending{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.status-badge.checked-in{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.status-badge.checked-out{
+
+    background:#e2e8f0;
+
+    color:#334155;
+
+}
+
+.status-badge.rejected{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+/* ===============================
+   VISITOR & HOST PANELS
+================================== */
+
+.visitor-details-panel,
+
+.host-details-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.visitor-details-panel h3,
+
+.host-details-panel h3{
+
+    margin:0 0 18px;
+
+    padding-bottom:10px;
+
+    border-bottom:2px solid #e5e7eb;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+}
+
+/* ===============================
+   ROW
+================================== */
+
+.detail-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:11px 0;
+
+    border-bottom:1px dashed #e5e7eb;
+
+}
+
+.detail-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.detail-row label{
+
+    font-size:14px;
+
+    color:#64748b;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+.detail-row span{
+
+    text-align:left;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#0f172a;
+
+    word-break:break-word;
+
+}
+
+/* ===============================
+   TABLET
+================================== */
+
+@media(max-width:1100px){
+
+.visitor-card{
+
+grid-template-columns:1fr;
+
+}
+
+.visitor-profile-panel{
+
+border-right:none;
+
+border-bottom:1px solid #e5e7eb;
+
+padding-right:0;
+
+padding-bottom:20px;
+
+}
+
+}
+
+/* ===============================
+   MOBILE
+================================== */
+
+@media(max-width:650px){
+
+.visitor-card{
+
+padding:16px;
+
+}
+
+.visitor-photo{
+
+width:120px;
+
+height:120px;
+
+}
+
+.detail-row{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.detail-row span{
+
+text-align:right;
+
+}
+
+.visitor-details-panel h3,
+
+.host-details-panel h3{
+
+font-size:18px;
+
+}
+
+}

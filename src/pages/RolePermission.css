@@ -1,0 +1,216 @@
+.role-permission-container {
+  width: 100%;
+  padding: 24px;
+  background-color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Flex setup for loaders */
+.centered-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #64748b;
+  font-size: 15px;
+  gap: 12px;
+}
+
+.loader-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spinPermission 0.8s linear infinite;
+}
+
+@keyframes spinPermission {
+  to { transform: rotate(360deg); }
+}
+
+.role-permission-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  padding: 32px;
+}
+
+/* Header Text Styles */
+.role-permission-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.role-permission-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.role-permission-header .subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Matrix Table Wrapper Layout Grid */
+.matrix-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Table Head Headers definitions */
+.matrix-table th {
+  background-color: #f8fafc;
+  padding: 14px 16px;
+  border-bottom: 2px solid #e2e8f0;
+  vertical-align: bottom;
+}
+
+.th-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  width: 18%;
+  padding-left: 20px !important;
+}
+
+.th-module {
+  text-align: center;
+}
+
+.module-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+/* Sub-header C R U D text layout markers */
+.crud-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  width: 110px;
+  margin: 0 auto;
+}
+
+.crud-legend span {
+  width: 16px;
+  text-align: center;
+}
+
+/* Body Content Rows configurations */
+.matrix-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.td-role {
+  white-space: nowrap;
+  padding-left: 20px !important;
+}
+
+/* Clean Dynamic Soft Pill shape badges matches */
+.role-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 110px;
+}
+
+.badge-blue { background-color: #e0f2fe; color: #0369a1; }
+.badge-indigo { background-color: #e0e7ff; color: #4338ca; }
+.badge-purple { background-color: #f3e8ff; color: #6b21a8; }
+.badge-orange { background-color: #ffedd5; color: #c2410c; }
+.badge-gray { background-color: #f1f5f9; color: #475569; }
+
+/* Checkbox alignment structures Setup */
+.td-permissions {
+  text-align: center;
+}
+
+.checkbox-crud-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 110px;
+  margin: 0 auto;
+}
+
+/* Modern Minimal Checkbox Resets and Focus Accent definitions */
+.checkbox-crud-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2563eb;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  outline: none;
+  transition: transform 0.1s ease;
+}
+
+.checkbox-crud-group input[type="checkbox"]:hover {
+  transform: scale(1.15);
+}
+
+/* Footer Controls Elements Placement block rules */
+.matrix-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-permissions-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s;
+}
+
+.save-permissions-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.save-permissions-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Mobile responsive scaling rules fallback */
+@media (max-width: 900px) {
+  .role-permission-card {
+    padding: 16px;
+  }
+  .crud-legend, .checkbox-crud-group {
+    gap: 10px;
+  }
+}

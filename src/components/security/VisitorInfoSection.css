@@ -1,0 +1,335 @@
+/* ==========================================
+   VISITOR SECTION
+========================================== */
+
+.verification-section{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    margin-bottom:22px;
+
+    border:1px solid #e5e7eb;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 18px rgba(15,23,42,.05);
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:20px 24px;
+
+    border-bottom:1px solid #edf1f5;
+
+    background:#f8fafc;
+
+}
+
+.section-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+
+.section-title h3{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:#0f172a;
+
+    font-weight:700;
+
+}
+
+.section-title p{
+
+    margin-top:4px;
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.visitor-profile-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:24px;
+
+}
+
+.visitor-avatar{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:3px solid #dbeafe;
+
+    background:#f8fafc;
+
+    flex-shrink:0;
+
+}
+
+.visitor-avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.avatar-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    color:#94a3b8;
+
+}
+
+.visitor-basic-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.visitor-basic-info h2{
+
+    margin:0;
+
+    font-size:28px;
+
+    color:#0f172a;
+
+    font-weight:700;
+
+}
+
+.visitor-id{
+
+    color:#2563eb;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   STATUS CHIP
+========================================== */
+
+.status-chip{
+
+    width:max-content;
+
+    padding:7px 16px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.status-chip.pending{
+
+    background:#FEF3C7;
+
+    color:#B45309;
+
+}
+
+.status-chip.approved{
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+}
+
+.status-chip.checked-in{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+}
+
+.status-chip.checked-out{
+
+    background:#F3F4F6;
+
+    color:#475569;
+
+}
+
+.status-chip.rejected{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+/* ==========================================
+   INFO GRID
+========================================== */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+    padding:0 24px 24px;
+
+}
+
+.info-box{
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    transition:.25s;
+
+}
+
+.info-box:hover{
+
+    border-color:#2563eb;
+
+    transform:translateY(-2px);
+
+}
+
+.info-box label{
+
+    display:block;
+
+    color:#64748b;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.info-box span{
+
+    display:block;
+
+    color:#0f172a;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    word-break:break-word;
+
+}
+
+.info-box.full{
+
+    grid-column:1/-1;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.visitor-profile-card{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.info-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.info-box.full{
+
+grid-column:auto;
+
+}
+
+}

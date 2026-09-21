@@ -1,0 +1,381 @@
+.search-results-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.06);
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+}
+
+/* ================= HEADER ================= */
+
+.results-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    border-bottom:1px solid #eef2f7;
+
+}
+
+.results-header h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+}
+
+.results-header span{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:6px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ================= ROW ================= */
+
+.result-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 22px;
+
+    border-bottom:1px solid #f1f5f9;
+
+    transition:.25s;
+
+}
+
+.result-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.result-item:hover{
+
+    background:#f8fafc;
+
+}
+
+/* ================= PHOTO ================= */
+
+.result-photo{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:#f1f5f9;
+
+    border:1px solid #dbeafe;
+
+    flex-shrink:0;
+
+}
+
+.result-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.photo-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    color:#94a3b8;
+
+}
+
+/* ================= DETAILS ================= */
+
+.result-details{
+
+    flex:1;
+
+}
+
+.result-name{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:4px;
+
+}
+
+.result-company{
+
+    color:#2563eb;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+.result-host{
+
+    color:#475569;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+
+}
+
+.result-date{
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+/* ================= RIGHT ================= */
+
+.result-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:14px;
+
+}
+
+/* ================= STATUS ================= */
+
+.result-status{
+
+    padding:7px 14px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.result-status.approved{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.result-status.pending{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+}
+
+.result-status.checked-in{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.result-status.checked-out{
+
+    background:#e2e8f0;
+
+    color:#475569;
+
+}
+
+.result-status.rejected{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+/* ================= BUTTON ================= */
+
+.result-right button{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.result-right button:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ================= EMPTY ================= */
+
+.search-results-empty{
+
+    background:white;
+
+    border:1px dashed #cbd5e1;
+
+    border-radius:18px;
+
+    padding:70px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:16px;
+
+    margin-top:20px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.result-item{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.result-right{
+
+    width:100%;
+
+    flex-direction:row;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.results-header{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.result-photo{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.result-name{
+
+    font-size:16px;
+
+}
+
+.result-company{
+
+    font-size:13px;
+
+}
+
+.result-right{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.result-right button{
+
+    width:100%;
+
+}
+
+}

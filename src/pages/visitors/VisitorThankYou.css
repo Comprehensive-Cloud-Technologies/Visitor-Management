@@ -1,0 +1,82 @@
+.thankyou-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2563eb, #d32853);
+  color: white;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.thankyou-card {
+  background: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 420px;
+}
+
+.emoji {
+  font-size: 40px;
+  animation: bounce 1.2s infinite;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 32px;
+}
+
+.subtext {
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background: white;
+  color: #2563eb;
+}
+
+
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.thankyou-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+.exit-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  background: #ffffff;
+  color: #2563eb;
+  transition: 0.3s ease;
+}
+
+.exit-btn:hover {
+  background: #e5e7eb;
+}

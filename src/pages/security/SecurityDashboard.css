@@ -1,0 +1,890 @@
+/* .security-page{
+
+padding:40px;
+
+background:#eef3f8;
+
+min-height:100vh;
+
+}
+
+.security-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:30px;
+
+}
+
+.security-header h1{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin:0;
+
+color:#0f4c81;
+
+}
+
+.security-header p{
+
+margin-top:8px;
+
+color:#64748b;
+
+}
+
+.security-live{
+
+background:#16a34a;
+
+color:white;
+
+padding:10px 20px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+}
+
+.search-box{
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.search-input{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.search-input input{
+
+flex:1;
+
+padding:16px;
+
+font-size:18px;
+
+border:2px solid #dbe3ef;
+
+border-radius:12px;
+
+}
+
+.search-input button{
+
+background:#0f4c81;
+
+color:white;
+
+border:none;
+
+padding:16px 30px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-size:16px;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.loading{
+
+text-align:center;
+
+margin-top:30px;
+
+font-size:20px;
+
+font-weight:bold;
+
+}
+
+.visitor-preview{
+
+margin-top:35px;
+
+background:white;
+
+border-radius:20px;
+
+padding:30px;
+
+display:flex;
+
+gap:35px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.photo img{
+
+width:180px;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+}
+
+.dummy{
+
+width:180px;
+
+height:180px;
+
+background:#e2e8f0;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:70px;
+
+border-radius:20px;
+
+}
+
+.details{
+
+flex:1;
+
+}
+
+.details h2{
+
+margin-top:0;
+
+color:#0f4c81;
+
+}
+
+.details p{
+
+font-size:18px;
+
+margin:15px 0;
+
+}
+
+.status{
+
+padding:8px 18px;
+
+border-radius:20px;
+
+color:white;
+
+margin-left:10px;
+
+font-weight:bold;
+
+}
+
+.status.PENDING{
+
+background:#f59e0b;
+
+}
+
+.status.Approved{
+
+background:#2563eb;
+
+}
+
+.status.CHECKED{
+
+background:#16a34a;
+
+}
+
+.status.REJECTED{
+
+background:#dc2626;
+
+}
+.security-alert{
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+.security-alert.success{
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    border-left:5px solid #22c55e;
+
+}
+
+.security-alert.danger{
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+    border-left:5px solid #ef4444;
+
+}
+.checkout-section{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.checkout-btn{
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.checkout-btn:hover{
+
+    background:#b91c1c;
+
+} */
+ /* ==========================================
+   SECURITY DASHBOARD
+========================================== */
+
+.security-dashboard{
+
+    min-height:100vh;
+
+    background:#f5f7fb;
+
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.dashboard-container{
+
+    width:100%;
+
+    max-width:1600px;
+
+    margin:auto;
+
+    padding:24px;
+
+}
+
+/* ==========================================
+   SPACING BETWEEN SECTIONS
+========================================== */
+
+.dashboard-container > *{
+
+    margin-bottom:24px;
+
+}
+
+/* ==========================================
+   SEARCH RESULT + ACTIVITY
+========================================== */
+
+.dashboard-top-section{
+
+    display:grid;
+
+    grid-template-columns:2.2fr 1fr;
+
+    gap:24px;
+
+    align-items:start;
+
+}
+
+/* Left Column */
+
+.dashboard-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* Right Column */
+
+.dashboard-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* ==========================================
+   COMMON CARD
+========================================== */
+
+.dashboard-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+
+        0 8px 24px rgba(15,23,42,.06);
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.dashboard-card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    border-bottom:1px solid #edf1f5;
+
+}
+
+.dashboard-card-header h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+}
+
+.dashboard-card-header p{
+
+    margin-top:4px;
+
+    font-size:13px;
+
+    color:#64748b;
+
+}
+
+/* ==========================================
+   CARD BODY
+========================================== */
+
+.dashboard-card-body{
+
+    padding:22px;
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.dashboard-top-section{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.dashboard-container{
+
+padding:18px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:576px){
+
+.dashboard-container{
+
+padding:14px;
+
+}
+
+.dashboard-container > *{
+
+margin-bottom:18px;
+
+}
+
+}
+.verification-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+}
+
+@media(max-width:900px){
+
+.verification-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.camera-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:14px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    box-shadow:0 6px 20px rgba(15,23,42,.06);
+
+}
+
+.camera-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.camera-card h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+}
+
+.camera-header p{
+
+    margin-top:5px;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+}
+
+.camera-status{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.camera-status.waiting{
+
+    background:#f3f4f6;
+
+    color:#6b7280;
+
+}
+
+.camera-status.verified{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.camera-placeholder{
+
+    text-align:center;
+
+    padding:35px;
+
+    border:2px dashed #d1d5db;
+
+    border-radius:14px;
+
+}
+
+.camera-icon{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+.camera-placeholder h4{
+
+    margin-bottom:8px;
+
+}
+
+.camera-placeholder p{
+
+    color:#6b7280;
+
+    margin-bottom:20px;
+
+}
+
+.camera-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.camera-live{
+
+    text-align:center;
+
+}
+
+.camera-view{
+
+    width:100%;
+
+    max-height:320px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+}
+
+.live-photo{
+
+    width:100%;
+
+    max-height:320px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+}
+
+.capture-info{
+
+    margin-top:8px;
+
+    text-align:center;
+
+}
+
+.capture-success{
+
+    color:#15803d;
+
+    font-weight:700;
+
+}
+
+.capture-time{
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    margin-top:4px;
+
+}
+
+.camera-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:10px;
+
+}
+
+.capture-btn{
+
+    background:#16a34a;
+
+    color:#fff;
+
+    border:none;
+
+    padding:8px 16px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.retake-btn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:none;
+
+    padding:8px 16px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.remove-btn{
+
+    background:#ef4444;
+
+    color:#fff;
+
+    border:none;
+
+    padding:8px 16px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.cancel-camera-btn{
+
+    background:#9ca3af;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 16px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+.photo-placeholder{
+
+    width:220px;
+
+    height:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:2px dashed #cbd5e1;
+
+    border-radius:12px;
+
+    color:#64748b;
+
+}
+.live-photo,
+.camera-view,
+.photo-placeholder{
+
+    width:100%;
+
+    max-width:260px;
+
+    height:100px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+.camera-btn,
+
+.capture-btn{
+
+    margin-top:15px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+.visitor-profile-card{
+    margin-bottom:4px;
+}
+
+.visitor-details-card{
+    margin-bottom:0;
+}
+
+.host-section{
+    margin-bottom:0;
+}
+
+.camera-card{
+    margin-top:14px;
+}
+
+.vehicle-card{
+    margin-top:14px;
+}
+
+.asset-card{
+    margin-top:14px;
+}
+
+.notes-card{
+    margin-top:14px;
+}
