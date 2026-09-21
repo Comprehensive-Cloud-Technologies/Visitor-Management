@@ -93,29 +93,19 @@ async (
 
       );
 
-    const io =
-      getIO();
-console.log("📢 Emitting notification...");
-    io.emit("newNotification",{
-
-id:result.insertId,
-
-title,
-
-message,
-
-visitor_id,
-
-type:"visitor",
-
-user_id:null,
-
-is_read:0,
-
-created_at:new Date()
-
-});
-console.log("✅ Notification emitted");
+    const io = getIO();
+    if (io) {
+      io.emit("newNotification", {
+        id: result.insertId,
+        title,
+        message,
+        visitor_id,
+        type: "visitor",
+        user_id: null,
+        is_read: 0,
+        created_at: new Date()
+      });
+    }
   }
 
   catch(error){
