@@ -2387,41 +2387,7 @@ if (
      UPLOADS FOLDER
   =============================== */
 
-  const uploadsDir =
-
-    path.join(
-
-      process.cwd(),
-
-      "uploads"
-
-    );
-
-
-  if (
-
-    !fs.existsSync(
-
-      uploadsDir
-
-    )
-
-  ) {
-
-    fs.mkdirSync(
-
-      uploadsDir,
-
-      {
-
-        recursive: true
-
-      }
-
-    );
-
-  }
-
+  const uploadsDir = "/tmp";
 
   /* ===============================
      GENERATE QR
@@ -5924,52 +5890,38 @@ async (
 
 
     /* ===============================
-       CREATE PDF PATH
+       FETCH VISITOR + COMPANY SETTINGS
+       AND REGENERATE PDF ON DEMAND
     =============================== */
 
-    const pdfPath =
-      path.join(
-
-        process.cwd(),
-
-        "uploads",
-
-        `visitor-pass-${id}.pdf`
-
-      );
-
-
-    /* ===============================
-       CHECK PDF EXISTS
-    =============================== */
-
-    if (
-      !fs.existsSync(
-        pdfPath
-      )
-    ) {
-
-      return res.status(404).json({
-
-        success: false,
-
-        message:
-          "Visitor Pass not found."
-
-      });
-
-    }
-
-
-    /* ===============================
-       SEND PDF
-    =============================== */
-
-    return res.sendFile(
-
-      pdfPath
-
+    const [visitorData] = await pool.execute(
+      `SELECT * FROM visitors WHERE id = ? AND company_id = ? LIMIT 1`,
+      [id, companyId]
     );
+
+    const [settingsData] = await pool.execute(
+      `SELECT * FROM company_settings WHERE company_id = ? LIMIT 1`,
+      [companyId]
+    );
+
+    const visitor = visitorData[0];
+    const companySettings = settingsData[0] || {};
+
+    const qrPath = path.join("/tmp", `qr-${id}.png`);
+    const visitorPassId = `VIS-${String(id).padStart(5, "0")}`;
+
+    await QRCode.toFile(qrPath, JSON.stringify({
+      visitorId: visitor.id,
+      visitorPassId,
+      visitorName: visitor.visitor_name
+    }));
+
+    const pdfPath = await generateVisitorPass(visitor, qrPath, companySettings);
+
+    res.setHeader("Content-Type", "application/pdf");
+    res.setHeader("Content-Disposition", `inline; filename="visitor-pass-${id}.pdf"`);
+
+    return res.sendFile(pdfPath);
 
   }
 

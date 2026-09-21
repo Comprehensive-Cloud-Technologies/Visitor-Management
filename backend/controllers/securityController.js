@@ -51,7 +51,7 @@ await pool.execute(
     WHERE
 
         (
-            v.id = ?
+            CAST(v.id AS CHAR) = ?
             OR v.mobile = ?
             OR v.visitor_name LIKE ?
         )

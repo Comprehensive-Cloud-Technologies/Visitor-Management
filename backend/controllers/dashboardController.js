@@ -9,13 +9,13 @@ async (req,res) => {
 
     const [totalEmployees] =
       await pool.execute(`
-        SELECT COUNT(*) total
+        SELECT COUNT(*)::int AS total
         FROM employees
       `);
 
     const [activeEmployees] =
       await pool.execute(`
-        SELECT COUNT(*) total
+        SELECT COUNT(*)::int AS total
         FROM employees
         WHERE status='Active'
       `);
@@ -24,14 +24,14 @@ async (req,res) => {
 
     const [checkedInVisitors] =
       await pool.execute(`
-        SELECT COUNT(*) total
+        SELECT COUNT(*)::int AS total
         FROM visitors
-        WHERE status='Checked In'
+        WHERE status='CHECKED IN'
       `);
 
     const [todayVisitors] =
       await pool.execute(`
-        SELECT COUNT(*) total
+        SELECT COUNT(*)::int AS total
         FROM visitors
         WHERE DATE(created_at)=CURDATE()
       `);

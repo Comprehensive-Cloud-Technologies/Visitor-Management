@@ -7,10 +7,7 @@ import process from "process";
 import { getVisitorPassHTML } from "./visitorPassTemplate.js";
 
 export const generateVisitorPass = async (visitor, qrPath, companySettings) => {
-    const uploadsFolder = path.join(process.cwd(), "uploads");
-    if (!fs.existsSync(uploadsFolder)) {
-        fs.mkdirSync(uploadsFolder, { recursive: true });
-    }
+    const uploadsFolder = "/tmp";
 
     const pdfPath = path.join(uploadsFolder, `visitor-pass-${visitor.id}.pdf`);
     if (fs.existsSync(pdfPath)) {

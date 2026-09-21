@@ -348,8 +348,8 @@ catch (error) {
 
     if (
 
-        error.code ===
-        "ER_DUP_ENTRY"
+        error.code === "23505" ||
+        error.code === "ER_DUP_ENTRY"
 
     ) {
 
@@ -617,8 +617,8 @@ catch (error) {
 
     if (
 
-        error.code ===
-        "ER_DUP_ENTRY"
+        error.code === "23505" ||
+        error.code === "ER_DUP_ENTRY"
 
     ) {
 

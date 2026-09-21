@@ -136,10 +136,7 @@ export const resetPassword = async (
     await pool.execute(
       `
       UPDATE users
-      SET
-      password = ?,
-      otp = NULL,
-      otp_expiry = NULL
+      SET password = ?
       WHERE email = ?
       `,
       [
